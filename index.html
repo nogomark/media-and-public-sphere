@@ -99,7 +99,7 @@ body {
 .spine-text {
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  transform: rotate(180deg);
+  transform: rotate(0deg);
   font-family: var(--font-serif);
   font-size: 9px; font-weight: 600;
   color: #c4956a; letter-spacing: 0.15em;
@@ -387,7 +387,7 @@ const PAGES = [
       <div class="cover-rule"></div>
       <div class="cover-authors"><strong>하늘바다</strong> &nbsp;·&nbsp; <strong>클로드</strong></div>
       <p class="cover-desc">유튜브의 시대는 공자와 소크라테스의 말이 돌아온 것인가, 아니면 전혀 새로운 무언가인가.</p>
-      <button class="cover-start" onclick="goTo(1)">읽기 시작하기 →</button>
+      <button class="cover-start" data-goto="1">읽기 시작하기 →</button>
     </div>` },
 
   // 1: toc
@@ -395,47 +395,61 @@ const PAGES = [
     <div class="toc-content">
       <div class="toc-title">목차</div>
       <ul class="toc-list">
-        <li class="toc-item" onclick="goTo(2)"><span class="toc-num">1</span><span class="toc-name">구술성의 귀환인가</span></li>
-        <li class="toc-item" onclick="goTo(3)"><span class="toc-num">2</span><span class="toc-name">미디어의 영향력</span></li>
-        <li class="toc-item" onclick="goTo(4)"><span class="toc-num">3</span><span class="toc-name">분절된 광장들</span></li>
-        <li class="toc-item" onclick="goTo(5)"><span class="toc-num">4</span><span class="toc-name">필터버블이란 무엇인가</span></li>
-        <li class="toc-item" onclick="goTo(6)"><span class="toc-num">5</span><span class="toc-name">공론장의 파편화</span></li>
-        <li class="toc-item" onclick="goTo(7)"><span class="toc-num">6</span><span class="toc-name">조선 주막, 백성의 광장</span></li>
+        <li class="toc-item" data-goto="2"><span class="toc-num">1</span><span class="toc-name">구술성의 귀환인가</span></li>
+        <li class="toc-item" data-goto="4"><span class="toc-num">2</span><span class="toc-name">미디어의 영향력</span></li>
+        <li class="toc-item" data-goto="6"><span class="toc-num">3</span><span class="toc-name">분절된 광장들</span></li>
+        <li class="toc-item" data-goto="8"><span class="toc-num">4</span><span class="toc-name">필터버블이란 무엇인가</span></li>
+        <li class="toc-item" data-goto="10"><span class="toc-num">5</span><span class="toc-name">공론장의 파편화</span></li>
+        <li class="toc-item" data-goto="12"><span class="toc-num">6</span><span class="toc-name">조선 주막, 백성의 광장</span></li>
       </ul>
     </div>` },
 
-  // 2: ch1
-  { id: 'ch1', html: `
+  // 2~4: ch1
+  { id: 'ch1-open', html: `
     <div class="chap-header"><div class="chap-num">제 1 장</div><h2 class="chap-title">구술성의 귀환인가</h2></div>
+    <div class="chap-intro" style="margin-bottom:24px">
+      <p class="speech" style="font-size:13px;font-weight:300;line-height:1.9;color:var(--ink-light);font-style:italic">본격적인 텍스트 시대 이전, 공자·석가·소크라테스는 말로 사유를 전달했다. 유튜브의 등장은 그 시대의 귀환인가?</p>
+    </div>
     <div class="dialogue">
       <div class="turn sky-turn">
         <div class="speaker-col"><span class="speaker-avatar">🙂</span><span class="speaker-name sky">하늘바다</span><span class="speaker-note">(이하 '바다')</span></div>
         <div class="speech-col"><div class="speech"><p>생각해보면 본격적인 텍스트 시대 이전에 공자, 석가, 소크라테스 같은 사람들은 말로 자신의 생각을 전달하는 사람들이었잖아. 어쩌면 책이나 신문 위주의 텍스트 시대에서 이제 유튜브 시대가 열린 것은 다시 말의 시대가 돌아온 거라고 볼 수 있지 않을까?</p></div></div>
       </div>
+    </div>` },
+
+  { id: 'ch1-a', html: `
+    <div class="chap-num" style="margin-bottom:16px">제 1 장 · 구술성의 귀환인가</div>
+    <div class="dialogue">
       <div class="turn claude-turn">
         <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
         <div class="speech-col"><div class="speech">
           <p>흥미로운 관점인데, 부분적으로는 맞고 부분적으로는 다른 것 같아요.</p>
-          <p><strong>맞는 부분 — 구술성의 귀환이라는 측면에서요.</strong><br>미디어 이론가 마샬 맥루한이나 월터 옹(Walter Ong)은 이미 이걸 예견했어요. 옹은 전자 미디어가 "제2의 구술성(secondary orality)"을 만든다고 했는데, 유튜브는 그 정점에 가깝죠. 목소리, 표정, 톤, 리듬으로 설득하는 방식이 다시 중심이 된 건 사실입니다.</p>
+          <p><strong>맞는 부분 — 구술성의 귀환이라는 측면에서요.</strong><br>미디어 이론가 마샬 맥루한이나 월터 옹(Walter Ong)은 이미 이걸 예견했어요. 옹은 전자 미디어가 "제2의 구술성(secondary orality)"을 만든다고 했는데, 유튜브는 그 정점에 가깝죠.</p>
           <p><strong>다른 부분 — 결정적인 차이가 있어요.</strong><br>공자·소크라테스의 말은 쌍방향 대화였어요. 제자가 반박하고, 스승이 수정하고, 함께 생각이 다듬어졌죠. 유튜브의 말은 단방향 퍼포먼스에 가깝습니다.</p>
-          <p><strong>또 다른 차이 — 몸과의 관계예요.</strong><br>고대의 구술은 같은 공간에서 이루어졌어요. 유튜브의 말은 몸이 분리된 채 편집되고 알고리즘으로 유통돼요.</p>
-          <p>그래서 — 유튜브 시대는 <em>말의 형식을 빌린 새로운 무언가</em>에 가까운 것 같아요.</p>
+          <p><strong>또 다른 차이 — 몸과의 관계예요.</strong><br>고대의 구술은 같은 공간에서 이루어졌어요. 유튜브의 말은 몸이 분리된 채 편집되고 알고리즘으로 유통돼요. 유튜브 시대는 <em>말의 형식을 빌린 새로운 무언가</em>에 가까운 것 같아요.</p>
         </div></div>
       </div>
     </div>` },
 
-  // 3: ch2
-  { id: 'ch2', html: `
+  // 5~7: ch2
+  { id: 'ch2-open', html: `
     <div class="chap-header"><div class="chap-num">제 2 장</div><h2 class="chap-title">미디어의 영향력</h2></div>
+    <div class="chap-intro" style="margin-bottom:24px">
+      <p class="speech" style="font-size:13px;font-weight:300;line-height:1.9;color:var(--ink-light);font-style:italic">텍스트는 논증을 요구하고, 영상은 인상을 요구한다. 닐 포스트먼의 경고는 유튜브 시대에도 유효한가?</p>
+    </div>
     <div class="dialogue">
       <div class="turn sky-turn">
         <div class="speaker-col"><span class="speaker-avatar">🙂</span><span class="speaker-name sky">바다</span></div>
         <div class="speech-col"><div class="speech"><p>미디어의 영향력 측면에서 더 얘기해줘.</p></div></div>
       </div>
+    </div>` },
+
+  { id: 'ch2-a', html: `
+    <div class="chap-num" style="margin-bottom:16px">제 2 장 · 미디어의 영향력</div>
+    <div class="dialogue">
       <div class="turn claude-turn">
         <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
         <div class="speech-col"><div class="speech">
-          <p>그러면 핵심적인 긴장 관계가 하나 있어요.</p>
           <p><strong>텍스트가 만든 것</strong><br>인쇄술 이후 텍스트는 "느린 사고"를 훈련시켰어요. 닐 포스트먼이 《Amusing Ourselves to Death》에서 — 인쇄 문화는 논증을 요구하고, 영상 문화는 인상을 요구한다고요.</p>
           <p><strong>유튜브가 바꾸는 것</strong><br>장점은 — 진입장벽이 낮아져서 지식의 민주화가 일어난 측면이 있어요.<br>위험은 — 설득이 논리에서 카리스마·편집으로 이동했어요. 소피스트의 문제가 알고리즘을 타고 대규모로 재현되는 거예요.</p>
           <p><strong>알고리즘이 더하는 것</strong><br>유튜브는 "더 오래 보게 만드는 말"을 인위적으로 증폭시켜요. 자극적이고, 감정적이고, 결론이 단순한 콘텐츠가 구조적으로 유리하죠.</p>
@@ -443,14 +457,22 @@ const PAGES = [
       </div>
     </div>` },
 
-  // 4: ch3
-  { id: 'ch3', html: `
+  // 8~10: ch3
+  { id: 'ch3-open', html: `
     <div class="chap-header"><div class="chap-num">제 3 장</div><h2 class="chap-title">분절된 광장들</h2></div>
+    <div class="chap-intro" style="margin-bottom:24px">
+      <p class="speech" style="font-size:13px;font-weight:300;line-height:1.9;color:var(--ink-light);font-style:italic">유튜브는 온라인 광장인가? 수백만 개의 분리된 방인가?</p>
+    </div>
     <div class="dialogue">
       <div class="turn sky-turn">
         <div class="speaker-col"><span class="speaker-avatar">🙂</span><span class="speaker-name sky">바다</span></div>
         <div class="speech-col"><div class="speech"><p>유튜브도 일종의 온라인 광장이라고 볼 수 있는 거지? 다만 청중들은 댓글 혹은 SNS나 커뮤 글로만 반응할 수 있는.</p></div></div>
       </div>
+    </div>` },
+
+  { id: 'ch3-a', html: `
+    <div class="chap-num" style="margin-bottom:16px">제 3 장 · 분절된 광장들</div>
+    <div class="dialogue">
       <div class="turn claude-turn">
         <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
         <div class="speech-col"><div class="speech">
@@ -462,32 +484,48 @@ const PAGES = [
       </div>
     </div>` },
 
-  // 5: ch4
-  { id: 'ch4', html: `
+  // 11~13: ch4
+  { id: 'ch4-open', html: `
     <div class="chap-header"><div class="chap-num">제 4 장</div><h2 class="chap-title">필터버블이란 무엇인가</h2></div>
+    <div class="chap-intro" style="margin-bottom:24px">
+      <p class="speech" style="font-size:13px;font-weight:300;line-height:1.9;color:var(--ink-light);font-style:italic">엘리 프레이저가 2011년 경고한 개념 — 우리는 이미 비눗방울 안에 갇혀 있는가?</p>
+    </div>
     <div class="dialogue">
       <div class="turn sky-turn">
         <div class="speaker-col"><span class="speaker-avatar">🙂</span><span class="speaker-name sky">바다</span></div>
         <div class="speech-col"><div class="speech"><p>필터버블은 무슨 말이야? 그리고 누가 한 말이야?</p></div></div>
       </div>
+    </div>` },
+
+  { id: 'ch4-a', html: `
+    <div class="chap-num" style="margin-bottom:16px">제 4 장 · 필터버블이란 무엇인가</div>
+    <div class="dialogue">
       <div class="turn claude-turn">
         <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
         <div class="speech-col"><div class="speech">
           <p>유튜브나 SNS 알고리즘은 내가 좋아할 만한 것만 보여줘요. 마치 <em>비눗방울(bubble) 안에 갇힌 것처럼</em> 나와 비슷한 생각만 계속 보이는 거예요.</p>
           <p><strong>개념을 만든 사람</strong><br>인터넷 활동가 엘리 프레이저(Eli Pariser)가 2011년 《The Filter Bubble》에서 처음 제시한 개념이에요. 개인화 알고리즘이 다양한 관점에 노출될 기회를 박탈한다고 비판했죠.</p>
-          <p>비슷한 개념으로 "에코 챔버(echo chamber)"도 있는데, 필터버블이 알고리즘의 기술적 문제에 초점을 맞춘다면, 에코 챔버는 비슷한 생각을 가진 사람들끼리만 모이는 선택적 행동에 더 주목해요. 둘 다 공론장의 파편화라는 같은 방향을 가리키죠.</p>
+          <p>비슷한 개념으로 "에코 챔버(echo chamber)"도 있는데, 필터버블이 알고리즘의 기술적 문제에 초점을 맞춘다면, 에코 챔버는 비슷한 생각을 가진 사람들끼리만 모이는 선택적 행동에 더 주목해요.</p>
         </div></div>
       </div>
     </div>` },
 
-  // 6: ch5
-  { id: 'ch5', html: `
+  // 14~16: ch5
+  { id: 'ch5-open', html: `
     <div class="chap-header"><div class="chap-num">제 5 장</div><h2 class="chap-title">공론장의 파편화</h2></div>
+    <div class="chap-intro" style="margin-bottom:24px">
+      <p class="speech" style="font-size:13px;font-weight:300;line-height:1.9;color:var(--ink-light);font-style:italic">KBS·MBC·SBS를 같이 보던 시대는 끝났다. 공통의 현실을 되찾을 수 있을까?</p>
+    </div>
     <div class="dialogue">
       <div class="turn sky-turn">
         <div class="speaker-col"><span class="speaker-avatar">🙂</span><span class="speaker-name sky">바다</span></div>
         <div class="speech-col"><div class="speech"><p>라디오나 공중파 방송은 비록 일방향이었지만 공론이 이루어질 수 있는 공간을 마련했어. 그들도 KBS, MBC, SBS 뉴스는 같이 봤지. 하지만 지금은 TV 뉴스도 MBC와 종편으로 갈라졌어. 이처럼 파편화된 시대에 다시 공론을 위한 공간을 마련할 가능성이 있을까?</p></div></div>
       </div>
+    </div>` },
+
+  { id: 'ch5-a', html: `
+    <div class="chap-num" style="margin-bottom:16px">제 5 장 · 공론장의 파편화</div>
+    <div class="dialogue">
       <div class="turn claude-turn">
         <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
         <div class="speech-col"><div class="speech">
@@ -498,34 +536,52 @@ const PAGES = [
       </div>
     </div>` },
 
-  // 7: ch6
-  { id: 'ch6', html: `
+  // 17~20: ch6
+  { id: 'ch6-open', html: `
     <div class="chap-header"><div class="chap-num">제 6 장</div><h2 class="chap-title">조선 주막, 백성의 광장</h2></div>
+    <div class="chap-intro" style="margin-bottom:24px">
+      <p class="speech" style="font-size:13px;font-weight:300;line-height:1.9;color:var(--ink-light);font-style:italic">알고리즘도, 플랫폼도 없이 — 그냥 같은 공간에 있었다는 것만으로 가능했던 공론장.</p>
+    </div>
     <div class="dialogue">
       <div class="turn sky-turn">
         <div class="speaker-col"><span class="speaker-avatar">🙂</span><span class="speaker-name sky">바다</span></div>
         <div class="speech-col"><div class="speech"><p>시대를 좀 많이 거슬러 올라가서, 옛날 조선시대 주막도 백성들 사이의 공론장으로 볼 수 있을까?</p></div></div>
       </div>
+    </div>` },
+
+  { id: 'ch6-a1', html: `
+    <div class="chap-num" style="margin-bottom:16px">제 6 장 · 조선 주막, 백성의 광장</div>
+    <div class="dialogue">
       <div class="turn claude-turn">
         <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
         <div class="speech-col"><div class="speech">
           <p>충분히 그렇게 볼 수 있어요. 오히려 조선 주막은 지금 우리가 잃어버린 공론장의 요소를 자연스럽게 갖고 있었어요.</p>
           <p><strong>공론장으로서 주막의 조건</strong><br>주막은 신분의 경계가 가장 흐릿해지는 공간이었어요. 양반도, 상인도, 보부상도 들어오죠. 하버마스가 이야기하는 시민 공론장의 원형과도 닮은 부분이 있고요.</p>
           <p><strong>정보의 교환과 민심의 흐름</strong><br>주막에서 도는 말은 민심의 척도였어요. 조정에서도 주막의 소문을 민심 파악의 통로로 여겼다는 기록이 있죠.</p>
+        </div></div>
+      </div>
+    </div>` },
+
+  { id: 'ch6-a2', html: `
+    <div class="chap-num" style="margin-bottom:16px">제 6 장 · 조선 주막, 백성의 광장</div>
+    <div class="dialogue">
+      <div class="turn claude-turn">
+        <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
+        <div class="speech-col"><div class="speech">
           <p><strong>한계도 있었어요.</strong><br>여성은 사실상 배제된 공간이었고, 대화들이 기록되거나 축적되는 구조가 없었어요.</p>
           <p>그럼에도, 주막의 쌍방향성과 신분을 넘는 혼합은 <em>같은 공간에 있었다는 것만으로</em> 가능했던 공론장이었으니까요.</p>
         </div></div>
       </div>
-      <div class="colophon">
-        <div class="colophon-label">대담을 마치며</div>
-        <p class="colophon-text">주막 → 광장 → 신문·라디오 → TV → 인터넷 → 유튜브·SNS.<br>결국 "누가 말할 수 있고, 누가 들을 수 있고, 얼마나 멀리 퍼지는가"의 변화다.</p>
-        <div class="colophon-ornament">❧</div>
-      </div>
+    </div>
+    <div class="colophon">
+      <div class="colophon-label">대담을 마치며</div>
+      <p class="colophon-text">주막 → 광장 → 신문·라디오 → TV → 인터넷 → 유튜브·SNS.<br>결국 "누가 말할 수 있고, 누가 들을 수 있고, 얼마나 멀리 퍼지는가"의 변화다.</p>
+      <div class="colophon-ornament">❧</div>
     </div>` },
 ];
 
 const TOTAL = PAGES.length;
-const TOC_LABELS = ['표지','목차','구술성의 귀환인가','미디어의 영향력','분절된 광장들','필터버블이란 무엇인가','공론장의 파편화','조선 주막, 백성의 광장'];
+const TOC_LABELS = [['표지',0],['목차',1],['구술성의 귀환인가',2],['미디어의 영향력',4],['분절된 광장들',6],['필터버블이란 무엇인가',8],['공론장의 파편화',10],['조선 주막, 백성의 광장',12]];
 
 let current = 0;
 let isAnimating = false;
@@ -550,10 +606,18 @@ function renderDesktop(leftIdx, rightIdx) {
   setContent(document.getElementById('rightInner'), rightIdx);
 }
 
+function isSinglePage(idx) { return idx === 0 || idx === 1; }
+
 function render(idx) {
   if (isDesktop()) {
-    const left = idx % 2 === 0 ? idx : idx - 1;
-    renderDesktop(left, left + 1);
+    if (isSinglePage(idx)) {
+      setContent(document.getElementById('leftInner'), idx);
+      document.getElementById('rightInner').innerHTML = '';
+    } else {
+      const off = idx - 2;
+      const left = off % 2 === 0 ? idx : idx - 1;
+      renderDesktop(left, left + 1);
+    }
   } else {
     renderMobile(idx);
   }
@@ -636,14 +700,24 @@ function goTo(idx, skipAnim) {
   }
 
   // desktop flip
-  const prevLeft  = prev % 2 === 0 ? prev : prev - 1;
-  const curLeft   = current % 2 === 0 ? current : current - 1;
+  const getLeft = (i) => {
+    if (i === 0 || i === 1) return i;
+    const off = i - 2;
+    return off % 2 === 0 ? i : i - 1;
+  };
+  const prevLeft = getLeft(prev);
+  const curLeft  = getLeft(current);
+
+  // 단독 페이지(표지/목차)가 포함된 이동은 flip 없이 바로 렌더
+  if (isSinglePage(prev) || isSinglePage(current)) {
+    render(current);
+    updateNav();
+    return;
+  }
 
   if (curLeft > prevLeft) {
-    // going forward
     flipForward(prevLeft, prevLeft + 1, curLeft, curLeft + 1);
   } else if (curLeft < prevLeft) {
-    // going backward
     flipBackward(prevLeft, prevLeft + 1, curLeft, curLeft + 1);
   } else {
     render(current);
@@ -654,7 +728,7 @@ function goTo(idx, skipAnim) {
 function changePage(dir) {
   if (isAnimating) return;
   if (isDesktop()) {
-    const step = 2;
+    const step = (isSinglePage(current) || isSinglePage(current + dir)) ? 1 : 2;
     goTo(current + dir * step);
   } else {
     goTo(current + dir);
@@ -666,11 +740,11 @@ render(0);
 
 // TOC
 const tocList = document.getElementById('tocList');
-TOC_LABELS.forEach((label, i) => {
+TOC_LABELS.forEach(([label, pageIdx], i) => {
   const li = document.createElement('li');
   li.className = 'toc-item';
   li.innerHTML = `<span class="toc-num">${i < 2 ? '—' : i - 1}</span><span class="toc-name">${label}</span>`;
-  li.onclick = () => { closeToc(); goTo(i); };
+  li.onclick = () => { closeToc(); goTo(pageIdx); };
   tocList.appendChild(li);
 });
 
@@ -720,6 +794,12 @@ function closeToc() { document.getElementById('tocOverlay').classList.remove('op
 
 // RESIZE
 window.addEventListener('resize', () => { render(current); });
+
+// EVENT DELEGATION — handles dynamically injected onclick targets
+document.getElementById('pagesWrap').addEventListener('click', e => {
+  const el = e.target.closest('[data-goto]');
+  if (el) goTo(parseInt(el.dataset.goto));
+});
 </script>
 </body>
 </html>
