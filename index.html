@@ -401,6 +401,7 @@ const PAGES = [
         <li class="toc-item" data-goto="8"><span class="toc-num">4</span><span class="toc-name">필터버블이란 무엇인가</span></li>
         <li class="toc-item" data-goto="10"><span class="toc-num">5</span><span class="toc-name">공론장의 파편화</span></li>
         <li class="toc-item" data-goto="12"><span class="toc-num">6</span><span class="toc-name">조선 주막, 백성의 광장</span></li>
+        <li class="toc-item" data-goto="14"><span class="toc-num">7</span><span class="toc-name">서원·향교, 엘리트의 광장</span></li>
       </ul>
     </div>` },
 
@@ -560,11 +561,7 @@ const PAGES = [
           <p><strong>정보의 교환과 민심의 흐름</strong><br>주막에서 도는 말은 민심의 척도였어요. 조정에서도 주막의 소문을 민심 파악의 통로로 여겼다는 기록이 있죠.</p>
         </div></div>
       </div>
-    </div>` },
-
-  { id: 'ch6-a2', html: `
-    <div class="chap-num" style="margin-bottom:16px">제 6 장 · 조선 주막, 백성의 광장</div>
-    <div class="dialogue">
+    </div>
       <div class="turn claude-turn">
         <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
         <div class="speech-col"><div class="speech">
@@ -572,16 +569,58 @@ const PAGES = [
           <p>그럼에도, 주막의 쌍방향성과 신분을 넘는 혼합은 <em>같은 공간에 있었다는 것만으로</em> 가능했던 공론장이었으니까요.</p>
         </div></div>
       </div>
+    </div>` },
+
+  { id: 'ch7-open', html: `
+    <div class="chap-header"><div class="chap-num">제 7 장</div><h2 class="chap-title">서원·향교, 엘리트의 광장</h2></div>
+    <div class="chap-intro" style="margin-bottom:24px">
+      <p class="speech" style="font-size:13px;font-weight:300;line-height:1.9;color:var(--ink-light);font-style:italic">주막이 기층 민심의 통로였다면, 서원·향교·유향소는 그것을 정치적 압력으로 전환했다. 조선의 제도화된 공론장.</p>
     </div>
-    <div class="colophon">
+    <div class="dialogue">
+      <div class="turn sky-turn">
+        <div class="speaker-col"><span class="speaker-avatar">🙂</span><span class="speaker-name sky">바다</span></div>
+        <div class="speech-col"><div class="speech">
+          <p>주막이 당대 기층 민중의 여론을 들을 수 있는 역할을 했다면, 지배층이 구성원인 서원, 향교, 유향소는 공론장으로서 실질적으로 정치에 영향을 끼쳤잖아. 성균관도. 관직이 없는 일반 선비도 참여했다는 점에서 당대를 감안하면 꽤 선진적인 면이 있었다고 볼 수 있지 않을까? 그게 근대 이후로 넘어가면 신문과 방송 뉴스로 모습을 드러내는 언론일까?</p>
+        </div></div>
+      </div>
+    </div>` },
+
+  { id: 'ch7-a1', html: `
+    <div class="chap-num" style="margin-bottom:16px">제 7 장 · 서원·향교, 엘리트의 광장</div>
+    <div class="dialogue">
+      <div class="turn claude-turn">
+        <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
+        <div class="speech-col"><div class="speech">
+          <p><strong>서원·향교·유향소가 공론장으로서 특별한 이유</strong><br>단순히 엘리트들의 모임이 아니라 <em>제도화된</em> 공론장이었다는 점이 핵심이에요. 의견이 집단적 의사로 수렴되고, 상소나 공론의 형태로 중앙 권력에 전달되는 채널이 있었죠. 주막이 민심의 반영이었다면, 이쪽은 민심을 <em>정치적 압력으로 전환</em>하는 기능을 했어요.</p>
+          <p>흥선대원군이 서원 철폐를 추진했다는 것 자체가 그 정치적 실효성을 증명하죠.</p>
+          <p><strong>선진성이라는 평가에 대해</strong><br>동의하는 부분이 있어요. 권력을 가진 자가 아니라 <em>지식과 명분을 가진 자</em>에게도 발언권을 준다는 의미거든요. 하버마스가 말한 18세기 커피하우스·살롱의 공론장보다 앞선 시기에 비슷한 구조를 갖고 있었어요. 물론 성별·신분의 장벽은 분명한 한계고요.</p>
+        </div></div>
+      </div>
+    </div>` },
+
+  { id: 'ch7-a2', html: `
+    <div class="chap-num" style="margin-bottom:16px">제 7 장 · 서원·향교, 엘리트의 광장</div>
+    <div class="dialogue">
+      <div class="turn claude-turn">
+        <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
+        <div class="speech-col"><div class="speech">
+          <p><strong>근대 언론으로의 연결</strong><br>권력 외부에서 권력을 비판하고, 집단적 의견을 형성하며, 정치에 실질적 압력을 가한다는 구조가 같아요. 다만 서원·향교는 <em>동질적 집단</em> 내부의 공론이었고, 근대 언론은 불특정 다수를 향해 열려 있다는 차이가 있어요.</p>
+          <p>흐름을 이렇게 볼 수 있어요: 주막(기층 민심 반영) → 서원·향교(엘리트 공론의 정치화) → 근대 신문(불특정 다수) → 방송(동시적 대중 공론) → 인터넷·유튜브(파편화된 공론)</p>
+          <p>아이러니하게도 참여자가 넓어질수록 공론의 정치적 응집력은 오히려 약해지는 경향이 있어요. 서원은 좁았지만 강했고, 유튜브는 넓지만 파편화돼 있죠.</p>
+        </div></div>
+      </div>
+    </div>` },
+
+  { id: 'colophon', html: `
+    <div class="colophon" style="height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 24px;text-align:center;">
       <div class="colophon-label">대담을 마치며</div>
-      <p class="colophon-text">주막 → 광장 → 신문·라디오 → TV → 인터넷 → 유튜브·SNS.<br>결국 "누가 말할 수 있고, 누가 들을 수 있고, 얼마나 멀리 퍼지는가"의 변화다.</p>
+      <p class="colophon-text">주막 → 서원·향교 → 신문·라디오 → TV → 인터넷 → 유튜브·SNS.<br>결국 "누가 말할 수 있고, 누가 들을 수 있고, 얼마나 멀리 퍼지는가"의 변화다.</p>
       <div class="colophon-ornament">❧</div>
     </div>` },
 ];
 
 const TOTAL = PAGES.length;
-const TOC_LABELS = [['표지',0],['목차',1],['구술성의 귀환인가',2],['미디어의 영향력',4],['분절된 광장들',6],['필터버블이란 무엇인가',8],['공론장의 파편화',10],['조선 주막, 백성의 광장',12]];
+const TOC_LABELS = [['표지',0],['목차',1],['구술성의 귀환인가',2],['미디어의 영향력',4],['분절된 광장들',6],['필터버블이란 무엇인가',8],['공론장의 파편화',10],['조선 주막, 백성의 광장',12],['서원·향교, 엘리트의 광장',14]];
 
 let current = 0;
 let isAnimating = false;
