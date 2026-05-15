@@ -399,9 +399,9 @@ const PAGES = [
         <li class="toc-item" data-goto="6"><span class="toc-num">2</span><span class="toc-name">미디어의 영향력</span></li>
         <li class="toc-item" data-goto="10"><span class="toc-num">3</span><span class="toc-name">분절된 광장들</span></li>
         <li class="toc-item" data-goto="13"><span class="toc-num">4</span><span class="toc-name">필터버블이란 무엇인가</span></li>
-        <li class="toc-item" data-goto="18"><span class="toc-num">5</span><span class="toc-name">조선 주막, 백성의 광장</span></li>
-        <li class="toc-item" data-goto="21"><span class="toc-num">6</span><span class="toc-name">서원·향교, 엘리트의 광장</span></li>
-        <li class="toc-item" data-goto="24"><span class="toc-num">7</span><span class="toc-name">공론장의 재건은 가능할까</span></li>
+        <li class="toc-item" data-goto="17"><span class="toc-num">5</span><span class="toc-name">조선 주막, 백성의 광장</span></li>
+        <li class="toc-item" data-goto="20"><span class="toc-num">6</span><span class="toc-name">서원·향교, 엘리트의 광장</span></li>
+        <li class="toc-item" data-goto="23"><span class="toc-num">7</span><span class="toc-name">공론장의 재건은 가능할까</span></li>
       </ul>
     </div>` },
 
@@ -549,7 +549,7 @@ const PAGES = [
     <div class="dialogue">
       <div class="turn sky-turn">
         <div class="speaker-col"><span class="speaker-avatar">🙂</span><span class="speaker-name sky">바다</span></div>
-        <div class="speech-col"><div class="speech"><p>필터버블은 무슨 말이야? 그리고 누가 한 말이야?</p></div></div>
+        <div class="speech-col"><div class="speech"><p>필터버블은 무슨 말이야?</p></div></div>
       </div>
     </div>` },
 
@@ -581,32 +581,17 @@ const PAGES = [
   { id: 'ch4-a2', html: `
     <div class="chap-num" style="margin-bottom:16px">제 4 장 · 필터버블이란 무엇인가</div>
     <div class="dialogue">
-      <div class="turn sky-turn">
-        <div class="speaker-col"><span class="speaker-avatar">🙂</span><span class="speaker-name sky">바다</span></div>
-        <div class="speech-col"><div class="speech">
-          <p>'필터버블'이란 말은 누가 한 말이야?</p>
-        </div></div>
-      </div>
       <div class="turn claude-turn">
         <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
         <div class="speech-col"><div class="speech">
-          <p>엘리 프레이저(Eli Pariser)라는 미국의 인터넷 활동가가 만든 말이에요.</p>
+          <p>이 개념을 처음 만든 사람은 엘리 프레이저(Eli Pariser)라는 미국의 인터넷 활동가예요.</p>
           <p>2011년에 《The Filter Bubble》이라는 책을 쓰면서 이 개념을 처음 대중에게 알렸어요. 구글, 페이스북 같은 플랫폼이 개인화 알고리즘을 본격적으로 쓰기 시작할 때였는데, 그게 민주주의에 어떤 영향을 미칠지 경고한 거죠.</p>
-        </div></div>
-      </div>
-    </div>` },
-
-  { id: 'ch4-a2b', html: `
-    <div class="chap-num" style="margin-bottom:16px">제 4 장 · 필터버블이란 무엇인가</div>
-    <div class="dialogue">
-      <div class="turn claude-turn">
-        <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
-        <div class="speech-col"><div class="speech">
           <p>그가 유명해진 계기 중 하나는 TED 강연이었는데 — 자신의 페이스북 피드에서 보수 성향 친구들의 글이 어느 순간부터 사라졌다는 걸 발견한 경험을 얘기했어요. 자기도 모르는 사이에 알고리즘이 걸러버린 거였죠.</p>
           <p>유튜브가 지금처럼 커지기 전에 이미 이 문제를 짚었다는 점에서 꽤 선구적인 개념이에요.</p>
         </div></div>
       </div>
     </div>` },
+
 
   // 14~16: ch5
   { id: 'ch5-open', html: `
@@ -744,7 +729,7 @@ const PAGES = [
 ];
 
 const TOTAL = PAGES.length;
-const TOC_LABELS = [['표지',0],['목차',1],['구술성의 귀환인가',2],['미디어의 영향력',6],['분절된 광장들',10],['필터버블이란 무엇인가',13],['조선 주막, 백성의 광장',18],['서원·향교, 엘리트의 광장',21],['공론장의 재건은 가능할까',24]];
+const TOC_LABELS = [['표지',0],['목차',1],['구술성의 귀환인가',2],['미디어의 영향력',6],['분절된 광장들',10],['필터버블이란 무엇인가',13],['조선 주막, 백성의 광장',17],['서원·향교, 엘리트의 광장',20],['공론장의 재건은 가능할까',23]];
 
 let current = 0;
 let isAnimating = false;
