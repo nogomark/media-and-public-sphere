@@ -407,12 +407,13 @@ const PAGES = [
         <li class="toc-item" data-goto="2"><span class="toc-num">1</span><span class="toc-name">구술성의 귀환인가</span></li>
         <li class="toc-item" data-goto="6"><span class="toc-num">2</span><span class="toc-name">미디어의 영향력</span></li>
         <li class="toc-item" data-goto="10"><span class="toc-num">3</span><span class="toc-name">분절된 광장들</span></li>
-        <li class="toc-item" data-goto="13"><span class="toc-num">4</span><span class="toc-name">필터버블이란 무엇인가</span></li>
-        <li class="toc-item" data-goto="17"><span class="toc-num">5</span><span class="toc-name">집단주의 문화와 온라인 커뮤니티</span></li>
-        <li class="toc-item" data-goto="20"><span class="toc-num">6</span><span class="toc-name">조선 주막, 백성의 광장</span></li>
-        <li class="toc-item" data-goto="23"><span class="toc-num">7</span><span class="toc-name">서원·향교, 엘리트의 광장</span></li>
-        <li class="toc-item" data-goto="26"><span class="toc-num">8</span><span class="toc-name">만민공동회에서 촛불까지</span></li>
-        <li class="toc-item" data-goto="35"><span class="toc-num">9</span><span class="toc-name">공론장의 재건은 가능할까</span></li>
+        <li class="toc-item" data-goto="15"><span class="toc-num">4</span><span class="toc-name">필터버블이란 무엇인가</span></li>
+        <li class="toc-item" data-goto="20"><span class="toc-num">5</span><span class="toc-name">집단주의 문화와 온라인 커뮤니티</span></li>
+        <li class="toc-item" data-goto="24"><span class="toc-num">6</span><span class="toc-name">다음 아고라에서 아프리카TV까지</span></li>
+        <li class="toc-item" data-goto="29"><span class="toc-num">7</span><span class="toc-name">조선 주막, 백성의 광장</span></li>
+        <li class="toc-item" data-goto="33"><span class="toc-num">8</span><span class="toc-name">서원·향교, 엘리트의 광장</span></li>
+        <li class="toc-item" data-goto="38"><span class="toc-num">9</span><span class="toc-name">만민공동회에서 촛불까지</span></li>
+        <li class="toc-item" data-goto="42"><span class="toc-num">10</span><span class="toc-name">공론장의 재건은 가능할까</span></li>
       </ul>
     </div>` },
 
@@ -684,9 +685,67 @@ const PAGES = [
       </div>
     </div>` },
 
-  // ch6 — 조선 주막
+  // ch6 — 다음 아고라에서 아프리카TV까지
   { id: 'ch6-open', html: `
-    <div class="chap-header"><div class="chap-num">제 6 장</div><h2 class="chap-title">조선 주막, 백성의 광장</h2></div>
+    <div class="chap-header"><div class="chap-num">제 6 장</div><h2 class="chap-title">다음 아고라에서 아프리카TV까지</h2></div>
+    <div class="chap-intro" style="margin-bottom:24px">
+      <p class="speech" style="font-size:13px;font-weight:300;line-height:1.9;color:var(--ink-light);font-style:italic">2000년대 중후반, 한국 온라인 공론의 전성기 — 그리고 2008년 촛불집회.</p>
+    </div>
+    <div class="dialogue">
+      <div class="turn sky-turn">
+        <div class="speaker-col"><span class="speaker-avatar">🙂</span><span class="speaker-name sky">바다</span></div>
+        <div class="speech-col"><div class="speech"><p>한국 공론장의 역사를 말할 때 아고라, 시사 블로그, 아프리카TV 이야기하고 싶어. 블로그랑 아프리카TV를 공론장으로 볼 수 있나는 의문이지만, '다음 아고라'는 확실히 공론장이었던 것 같아.</p></div></div>
+      </div>
+    </div>` },
+
+  { id: 'ch6-a1', html: `
+    <div class="chap-num" style="margin-bottom:16px">제 6 장 · 다음 아고라에서 아프리카TV까지</div>
+    <div class="dialogue">
+      <div class="turn claude-turn">
+        <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
+        <div class="speech-col"><div class="speech">
+          <p>정말 중요한 지점을 짚으셨어요. 계보에서 빠진 고리들이에요.</p>
+          <p><strong>다음 아고라</strong><br>가장 명확한 공론장이죠. 2008년 촛불집회의 실질적인 온라인 진원지였어요. 광우병 관련 청원이 수백만 서명을 모으고, 거기서 형성된 여론이 오프라인 집회로 이어졌으니까요. 구조 자체가 토론·청원·서명을 위해 설계된 공간이었다는 점에서 처음부터 공론장을 의도한 플랫폼이었어요.</p>
+        </div></div>
+      </div>
+    </div>` },
+
+  { id: 'ch6-a2', html: `
+    <div class="chap-num" style="margin-bottom:16px">제 6 장 · 다음 아고라에서 아프리카TV까지</div>
+    <div class="dialogue">
+      <div class="turn claude-turn">
+        <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
+        <div class="speech-col"><div class="speech">
+          <p><strong>시사 블로거</strong><br>개인 블로그 자체는 공론장이라기보다 <em>발언대</em>에 가까워요. 그런데 당시 시사 블로거들이 특별했던 건 블로거 네트워크, 트랙백, 댓글로 서로 연결되면서 집합적으로 공론을 형성했다는 점이에요. 개별 블로그는 발언대지만 그 네트워크 전체가 공론장이었던 거죠.</p>
+        </div></div>
+      </div>
+    </div>` },
+
+  { id: 'ch6-a3', html: `
+    <div class="chap-num" style="margin-bottom:16px">제 6 장 · 다음 아고라에서 아프리카TV까지</div>
+    <div class="dialogue">
+      <div class="turn claude-turn">
+        <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
+        <div class="speech-col"><div class="speech">
+          <p><strong>아프리카TV</strong><br>시사 BJ들이 실시간으로 뉴스를 분석하고 시청자와 채팅으로 반응을 주고받는 구조는 쌍방향성 면에서 유튜브보다 오히려 앞섰어요. 지금 유튜브 정치 채널의 원형이 아프리카TV 시사 BJ 문화에서 나왔다고 볼 수 있죠. 다만 별풍선 경제와 결합되면서 자극적인 방향으로 흐르는 압력이 있었고, 그게 나중에 유튜브 알고리즘 문제와 같은 구조적 왜곡으로 이어졌어요.</p>
+        </div></div>
+      </div>
+    </div>` },
+
+  { id: 'ch6-a4', html: `
+    <div class="chap-num" style="margin-bottom:16px">제 6 장 · 다음 아고라에서 아프리카TV까지</div>
+    <div class="dialogue">
+      <div class="turn claude-turn">
+        <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
+        <div class="speech-col"><div class="speech">
+          <p>2008년 촛불집회가 흥미로운 건 다음 아고라·블로그·아프리카TV가 온라인에서 공론을 형성하고, 그게 오프라인 광장으로 폭발한 순간이었다는 거예요. 온라인과 오프라인 공론장이 처음으로 강하게 결합한 사례로 볼 수 있어요.</p>
+        </div></div>
+      </div>
+    </div>` },
+
+  // ch7 — 조선 주막
+  { id: 'ch7-open', html: `
+    <div class="chap-header"><div class="chap-num">제 7 장</div><h2 class="chap-title">조선 주막, 백성의 광장</h2></div>
     <div class="chap-intro" style="margin-bottom:24px">
       <p class="speech" style="font-size:13px;font-weight:300;line-height:1.9;color:var(--ink-light);font-style:italic">알고리즘도, 플랫폼도 없이 — 그냥 같은 공간에 있었다는 것만으로 가능했던 공론장.</p>
     </div>
@@ -697,8 +756,8 @@ const PAGES = [
       </div>
     </div>` },
 
-  { id: 'ch6-a1', html: `
-    <div class="chap-num" style="margin-bottom:16px">제 6 장 · 조선 주막, 백성의 광장</div>
+  { id: 'ch7-a1', html: `
+    <div class="chap-num" style="margin-bottom:16px">제 7 장 · 조선 주막, 백성의 광장</div>
     <div class="dialogue">
       <div class="turn claude-turn">
         <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
@@ -709,8 +768,8 @@ const PAGES = [
       </div>
     </div>` },
 
-  { id: 'ch6-a2', html: `
-    <div class="chap-num" style="margin-bottom:16px">제 6 장 · 조선 주막, 백성의 광장</div>
+  { id: 'ch7-a2', html: `
+    <div class="chap-num" style="margin-bottom:16px">제 7 장 · 조선 주막, 백성의 광장</div>
     <div class="dialogue">
       <div class="turn claude-turn">
         <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
@@ -720,20 +779,20 @@ const PAGES = [
       </div>
     </div>` },
 
-  { id: 'ch6-a2b', html: `
-    <div class="chap-num" style="margin-bottom:16px">제 6 장 · 조선 주막, 백성의 광장</div>
+  { id: 'ch7-a2b', html: `
+    <div class="chap-num" style="margin-bottom:16px">제 7 장 · 조선 주막, 백성의 광장</div>
     <div class="dialogue">
       <div class="turn claude-turn">
         <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
         <div class="speech-col"><div class="speech">
-          <p><strong>비교하면 재미있는 지점이 있어요</strong><br>주막 → 광장 → 신문·라디오 → TV → 인터넷 커뮤니티 → 유튜브·SNS<br>이렇게 보면 공론장의 역사가 결국 <em>누가 말할 수 있고, 누가 들을 수 있고, 얼마나 멀리 퍼지는가</em>의 변화예요. 주막은 범위가 좁은 대신 쌍방향이었고, 유튜브는 범위가 넓은 대신 구조적으로 왜곡돼 있죠.</p>
+          <p><strong>비교하면 재미있는 지점이 있어요</strong><br>주막 → 광장 → 신문·라디오 → TV → 인터넷 커뮤니티·아고라·블로그·아프리카TV → 유튜브·SNS<br>이렇게 보면 공론장의 역사가 결국 <em>누가 말할 수 있고, 누가 들을 수 있고, 얼마나 멀리 퍼지는가</em>의 변화예요. 주막은 범위가 좁은 대신 쌍방향이었고, 유튜브는 범위가 넓은 대신 구조적으로 왜곡돼 있죠.</p>
           <p>어떻게 보면 주막이 가졌던 자연스러운 쌍방향성과 신분을 넘는 혼합은 오히려 지금 우리가 잃어버린 것에 가까운 것 같아요.</p>
         </div></div>
       </div>
     </div>` },
 
-  { id: 'ch7-open', html: `
-    <div class="chap-header"><div class="chap-num">제 7 장</div><h2 class="chap-title">서원·향교, 엘리트의 광장</h2></div>
+  { id: 'ch8-open', html: `
+    <div class="chap-header"><div class="chap-num">제 8 장</div><h2 class="chap-title">서원·향교, 엘리트의 광장</h2></div>
     <div class="chap-intro" style="margin-bottom:24px">
       <p class="speech" style="font-size:13px;font-weight:300;line-height:1.9;color:var(--ink-light);font-style:italic">주막이 기층 민심의 통로였다면, 서원·향교·유향소는 그것을 정치적 압력으로 전환했다. 조선의 제도화된 공론장.</p>
     </div>
@@ -746,8 +805,8 @@ const PAGES = [
       </div>
     </div>` },
 
-  { id: 'ch7-a1', html: `
-    <div class="chap-num" style="margin-bottom:16px">제 7 장 · 서원·향교, 엘리트의 광장</div>
+  { id: 'ch8-a1', html: `
+    <div class="chap-num" style="margin-bottom:16px">제 8 장 · 서원·향교, 엘리트의 광장</div>
     <div class="dialogue">
       <div class="turn claude-turn">
         <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
@@ -758,8 +817,8 @@ const PAGES = [
       </div>
     </div>` },
 
-  { id: 'ch7-a1b', html: `
-    <div class="chap-num" style="margin-bottom:16px">제 7 장 · 서원·향교, 엘리트의 광장</div>
+  { id: 'ch8-a1b', html: `
+    <div class="chap-num" style="margin-bottom:16px">제 8 장 · 서원·향교, 엘리트의 광장</div>
     <div class="dialogue">
       <div class="turn claude-turn">
         <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
@@ -769,8 +828,8 @@ const PAGES = [
       </div>
     </div>` },
 
-  { id: 'ch7-a2', html: `
-    <div class="chap-num" style="margin-bottom:16px">제 7 장 · 서원·향교, 엘리트의 광장</div>
+  { id: 'ch8-a2', html: `
+    <div class="chap-num" style="margin-bottom:16px">제 8 장 · 서원·향교, 엘리트의 광장</div>
     <div class="dialogue">
       <div class="turn claude-turn">
         <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
@@ -780,20 +839,20 @@ const PAGES = [
       </div>
     </div>` },
 
-  { id: 'ch7-a2b', html: `
-    <div class="chap-num" style="margin-bottom:16px">제 7 장 · 서원·향교, 엘리트의 광장</div>
+  { id: 'ch8-a2b', html: `
+    <div class="chap-num" style="margin-bottom:16px">제 8 장 · 서원·향교, 엘리트의 광장</div>
     <div class="dialogue">
       <div class="turn claude-turn">
         <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
         <div class="speech-col"><div class="speech">
-          <p>흐름을 이렇게 볼 수 있어요: 주막(기층 민심 반영) → 서원·향교(엘리트 공론의 정치화) → 근대 신문(불특정 다수) → 방송(동시적 대중 공론) → 인터넷·유튜브(파편화된 공론)</p>
+          <p>흐름을 이렇게 볼 수 있어요: 주막(기층 민심 반영) → 서원·향교(엘리트 공론의 정치화) → 근대 신문·방송(대중 공론) → 인터넷 카페·아고라·블로그·아프리카TV(온라인 공론의 전성기) → 유튜브·SNS(파편화된 공론)</p>
           <p>아이러니하게도 참여자가 넓어질수록 공론의 정치적 응집력은 오히려 약해지는 경향이 있어요. 서원은 좁았지만 강했고, 유튜브는 넓지만 파편화돼 있죠.</p>
         </div></div>
       </div>
     </div>` },
 
-  { id: 'ch8-open', html: `
-    <div class="chap-header"><div class="chap-num">제 8 장</div><h2 class="chap-title">만민공동회에서 촛불까지</h2></div>
+  { id: 'ch9-open', html: `
+    <div class="chap-header"><div class="chap-num">제 9 장</div><h2 class="chap-title">만민공동회에서 촛불까지</h2></div>
     <div class="chap-intro" style="margin-bottom:24px">
       <p class="speech" style="font-size:13px;font-weight:300;line-height:1.9;color:var(--ink-light);font-style:italic">1898년 광장에서 2008년 광장으로 — 몸이 거기 있다는 것 자체가 발언이 된다.</p>
     </div>
@@ -804,8 +863,8 @@ const PAGES = [
       </div>
     </div>` },
 
-  { id: 'ch8-a1', html: `
-    <div class="chap-num" style="margin-bottom:16px">제 8 장 · 만민공동회에서 촛불까지</div>
+  { id: 'ch9-a1', html: `
+    <div class="chap-num" style="margin-bottom:16px">제 9 장 · 만민공동회에서 촛불까지</div>
     <div class="dialogue">
       <div class="turn claude-turn">
         <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
@@ -816,8 +875,8 @@ const PAGES = [
       </div>
     </div>` },
 
-  { id: 'ch8-a1b', html: `
-    <div class="chap-num" style="margin-bottom:16px">제 8 장 · 만민공동회에서 촛불까지</div>
+  { id: 'ch9-a1b', html: `
+    <div class="chap-num" style="margin-bottom:16px">제 9 장 · 만민공동회에서 촛불까지</div>
     <div class="dialogue">
       <div class="turn claude-turn">
         <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
@@ -827,89 +886,21 @@ const PAGES = [
       </div>
     </div>` },
 
-  { id: 'ch8-a2', html: `
-    <div class="chap-num" style="margin-bottom:16px">제 8 장 · 만민공동회에서 촛불까지</div>
+  { id: 'ch9-a2', html: `
+    <div class="chap-num" style="margin-bottom:16px">제 9 장 · 만민공동회에서 촛불까지</div>
     <div class="dialogue">
       <div class="turn claude-turn">
         <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
         <div class="speech-col"><div class="speech">
           <p>흥미로운 건 만민공동회와 촛불집회 사이에 공통점이 하나 더 있어요 — 둘 다 기존 제도적 채널이 막혔다고 느낀 시민들이 몸을 광장으로 가져온 방식이었다는 거예요.</p>
-          <p>주막(기층 민심) → 서원·향교(제도화된 엘리트 공론) → 만민공동회(최초의 신분 초월 광장 공론) → 근대 신문·방송(대중 공론) → 촛불집회·광장 집회(광장 공론의 부활) → 유튜브·SNS(파편화된 공론)</p>
+          <p>주막(기층 민심) → 서원·향교(제도화된 엘리트 공론) → 만민공동회(최초의 신분 초월 광장 공론) → 근대 신문·방송(대중 공론) → 인터넷 카페·아고라·블로그·아프리카TV(온라인 공론의 전성기) → 촛불집회(온·오프 결합) → X·유튜브·SNS(파편화, 위기 시 결집)</p>
           <p>디지털 공론이 아무리 발달해도 결정적인 순간에 사람들이 다시 광장으로 나오는 이유가 거기 있는 것 같아요. 몸이 거기 있다는 것 자체가 발언이 되는 거죠.</p>
         </div></div>
       </div>
     </div>` },
 
-  { id: 'ch8-q2', html: `
-    <div class="chap-num" style="margin-bottom:16px">제 8 장 · 만민공동회에서 촛불까지</div>
-    <div class="dialogue">
-      <div class="turn sky-turn">
-        <div class="speaker-col"><span class="speaker-avatar">🙂</span><span class="speaker-name sky">바다</span></div>
-        <div class="speech-col"><div class="speech"><p>X가 트위터라는 이름으로 출발하던 초창기에는 창업자가 민주주의 공론장으로서의 공간을 제공하려는 의도도 있었던 거 같은데 맞아? 옛날 기억이 정확한지 모르겠네.</p></div></div>
-      </div>
-    </div>` },
-
-  { id: 'ch8-a3', html: `
-    <div class="chap-num" style="margin-bottom:16px">제 8 장 · 만민공동회에서 촛불까지</div>
-    <div class="dialogue">
-      <div class="turn claude-turn">
-        <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
-        <div class="speech-col"><div class="speech">
-          <p>네, 맞아요! 기억이 정확해요.</p>
-          <p>트위터 공동창업자 잭 도시가 처음 트위터를 구상할 때 단순한 SNS가 아니라 공개적인 대화의 장을 만들겠다는 이상주의적 비전이 있었어요. "세계의 공론장(global town square)"이라는 표현을 직접 쓰기도 했고요.</p>
-          <p>실제로 2010년대 초 아랍의 봄 때 트위터가 민주화 운동의 도구로 쓰이면서 그 비전이 현실이 되는 것처럼 보이기도 했어요.</p>
-        </div></div>
-      </div>
-    </div>` },
-
-  { id: 'ch8-a3b', html: `
-    <div class="chap-num" style="margin-bottom:16px">제 8 장 · 만민공동회에서 촛불까지</div>
-    <div class="dialogue">
-      <div class="turn claude-turn">
-        <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
-        <div class="speech-col"><div class="speech">
-          <p><strong>아이러니한 반전</strong><br>일론 머스크가 트위터를 인수할 때 내세운 명분도 똑같이 "표현의 자유, 공론장 복원"이었어요. 잭 도시가 너무 검열을 많이 한다고 비판하면서요.</p>
-          <p>그런데 막상 인수 후에는 광고주 이탈, 극단적 콘텐츠 확산 등으로 오히려 공론장으로서의 신뢰가 떨어졌다는 평가가 많죠. 잭 도시가 머스크 인수를 처음엔 지지했다가 나중에 공개적으로 비판한 것도 그런 맥락이고요.</p>
-          <p>창업자의 이상 → 현실의 광고 비즈니스 → 머스크의 인수 → 다시 이상을 내세웠지만 혼란으로 귀결된, 꽤 드라마틱한 역사예요.</p>
-        </div></div>
-      </div>
-    </div>` },
-
-  { id: 'ch8-q3', html: `
-    <div class="chap-num" style="margin-bottom:16px">제 8 장 · 만민공동회에서 촛불까지</div>
-    <div class="dialogue">
-      <div class="turn sky-turn">
-        <div class="speaker-col"><span class="speaker-avatar">🙂</span><span class="speaker-name sky">바다</span></div>
-        <div class="speech-col"><div class="speech"><p>근데 한국에서는 일론 머스크의 정치 성향과는 상관없이 X는 뭔가 정치적으로 진보적인 매체로 여겨져. 비교적 최근 한국의 정치 격변 상황에서도 그런 분위기가 영향을 미쳤고.</p></div></div>
-      </div>
-    </div>` },
-
-  { id: 'ch8-a4', html: `
-    <div class="chap-num" style="margin-bottom:16px">제 8 장 · 만민공동회에서 촛불까지</div>
-    <div class="dialogue">
-      <div class="turn claude-turn">
-        <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
-        <div class="speech-col"><div class="speech">
-          <p>맞아요, 되게 흥미로운 현상이에요.</p>
-          <p><strong>왜 한국에서 X가 진보적으로 여겨지냐면</strong><br>한국 트위터는 페미니즘·인권·노동 이슈에 민감한 20~30대가 주류를 형성해왔어요. 이게 오랫동안 누적되면서 플랫폼 자체의 이미지가 굳어진 거죠. 일론 머스크가 어떤 성향이든 이미 한국 내 이용자 문화가 그 방향으로 자리잡혀 있으니까요.</p>
-        </div></div>
-      </div>
-    </div>` },
-
-  { id: 'ch8-a4b', html: `
-    <div class="chap-num" style="margin-bottom:16px">제 8 장 · 만민공동회에서 촛불까지</div>
-    <div class="dialogue">
-      <div class="turn claude-turn">
-        <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
-        <div class="speech-col"><div class="speech">
-          <p><strong>2024년 계엄 사태 때</strong><br>실제로 작년 계엄 사태 당시 X가 굉장히 중요한 역할을 했죠. 새벽에 갑자기 터진 사건이라 기존 언론이 빠르게 대응하기 어려운 상황에서 X를 통해 실시간으로 정보가 퍼지고, 국회로 시민들이 모이는 데도 영향을 미쳤고요.</p>
-          <p>결국 플랫폼은 그릇이고, 그 안에 어떤 사람들이 모이느냐가 문화를 결정한다는 걸 잘 보여주는 사례인 것 같아요.</p>
-        </div></div>
-      </div>
-    </div>` },
-
-  { id: 'ch9-open', html: `
-    <div class="chap-header"><div class="chap-num">제 9 장</div><h2 class="chap-title">공론장의 재건은 가능할까</h2></div>
+  { id: 'ch10-open', html: `
+    <div class="chap-header"><div class="chap-num">제 10 장</div><h2 class="chap-title">공론장의 재건은 가능할까</h2></div>
     <div class="chap-intro" style="margin-bottom:24px">
       <p class="speech" style="font-size:13px;font-weight:300;line-height:1.9;color:var(--ink-light);font-style:italic">파편화된 미디어 환경에서 공론장의 재건은 가능한가. 그 조건과 한계를 묻다.</p>
     </div>
@@ -920,8 +911,8 @@ const PAGES = [
       </div>
     </div>` },
 
-  { id: 'ch9-a1', html: `
-    <div class="chap-num" style="margin-bottom:16px">제 9 장 · 공론장의 재건은 가능할까</div>
+  { id: 'ch10-a1', html: `
+    <div class="chap-num" style="margin-bottom:16px">제 10 장 · 공론장의 재건은 가능할까</div>
     <div class="dialogue">
       <div class="turn claude-turn">
         <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
@@ -932,8 +923,8 @@ const PAGES = [
       </div>
     </div>` },
 
-  { id: 'ch9-a1b', html: `
-    <div class="chap-num" style="margin-bottom:16px">제 9 장 · 공론장의 재건은 가능할까</div>
+  { id: 'ch10-a1b', html: `
+    <div class="chap-num" style="margin-bottom:16px">제 10 장 · 공론장의 재건은 가능할까</div>
     <div class="dialogue">
       <div class="turn claude-turn">
         <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
@@ -943,8 +934,8 @@ const PAGES = [
       </div>
     </div>` },
 
-  { id: 'ch9-a2', html: `
-    <div class="chap-num" style="margin-bottom:16px">제 9 장 · 공론장의 재건은 가능할까</div>
+  { id: 'ch10-a2', html: `
+    <div class="chap-num" style="margin-bottom:16px">제 10 장 · 공론장의 재건은 가능할까</div>
     <div class="dialogue">
       <div class="turn claude-turn">
         <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
@@ -954,8 +945,8 @@ const PAGES = [
       </div>
     </div>` },
 
-  { id: 'ch9-a2b', html: `
-    <div class="chap-num" style="margin-bottom:16px">제 9 장 · 공론장의 재건은 가능할까</div>
+  { id: 'ch10-a2b', html: `
+    <div class="chap-num" style="margin-bottom:16px">제 10 장 · 공론장의 재건은 가능할까</div>
     <div class="dialogue">
       <div class="turn claude-turn">
         <div class="speaker-col"><span class="speaker-avatar">🤖</span><span class="speaker-name claude">클로드</span></div>
@@ -970,13 +961,13 @@ const PAGES = [
   { id: 'colophon', html: `
     <div class="colophon" style="height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 24px;text-align:center;">
       <div class="colophon-label">대담을 마치며</div>
-      <p class="colophon-text">주막(기층 민심) → 서원·향교(제도화된 엘리트 공론) → 만민공동회(최초의 신분 초월 광장 공론)<br>→ 근대 신문·방송(대중 공론) → 인터넷 카페·커뮤니티(집단주의적 온라인 공론)<br>→ 촛불집회·광장 집회(광장 공론의 부활) → X·유튜브·SNS(파편화, 그러나 위기 시 결집)<br><br>결국 "누가 말할 수 있고, 누가 들을 수 있고, 얼마나 멀리 퍼지는가"의 변화다.</p>
+      <p class="colophon-text">주막(기층 민심) → 서원·향교(제도화된 엘리트 공론) → 만민공동회(최초의 신분 초월 광장 공론)<br>→ 근대 신문·방송(대중 공론) → 인터넷 카페·커뮤니티(집단주의적 온라인 공론)<br>→ 다음 아고라·블로그·아프리카TV(온라인 공론의 전성기)<br>→ 촛불집회(온·오프 결합) → X·유튜브·SNS(파편화, 그러나 위기 시 결집)<br><br>결국 "누가 말할 수 있고, 누가 들을 수 있고, 얼마나 멀리 퍼지는가"의 변화다.</p>
       <div class="colophon-ornament">❧</div>
     </div>` },
 ];
 
 const TOTAL = PAGES.length;
-const TOC_LABELS = [['표지',0],['목차',1],['구술성의 귀환인가',2],['미디어의 영향력',6],['분절된 광장들',10],['필터버블이란 무엇인가',13],['집단주의 문화와 온라인 커뮤니티',17],['조선 주막, 백성의 광장',20],['서원·향교, 엘리트의 광장',23],['만민공동회에서 촛불까지',26],['공론장의 재건은 가능할까',35]];
+const TOC_LABELS = [['표지',0],['목차',1],['구술성의 귀환인가',2],['미디어의 영향력',6],['분절된 광장들',10],['필터버블이란 무엇인가',15],['집단주의 문화와 온라인 커뮤니티',20],['다음 아고라에서 아프리카TV까지',24],['조선 주막, 백성의 광장',29],['서원·향교, 엘리트의 광장',33],['만민공동회에서 촛불까지',38],['공론장의 재건은 가능할까',42]];
 
 let current = 0;
 let isAnimating = false;
